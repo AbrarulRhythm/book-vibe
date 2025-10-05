@@ -10,6 +10,9 @@ const Navbar = () => {
         <NavLink to='/about'>
             <li className='mx-2 text-base font-medium'>About</li>
         </NavLink>
+        <NavLink to='/readList'>
+            <li className='mx-2 text-base font-medium'>Read List</li>
+        </NavLink>
     </>
 
     return (
