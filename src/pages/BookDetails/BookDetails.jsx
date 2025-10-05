@@ -1,6 +1,11 @@
 import React from 'react';
 import { useLoaderData, useParams } from 'react-router';
 import { addToStoredDB } from '../../utility/addToDB';
+// import Swal from 'sweetalert2';
+// import withReactContent from 'sweetalert2-react-content';
+
+// const MySwal = withReactContent(Swal);
+import { ToastContainer } from 'react-toastify';
 
 const BookDetails = () => {
 
@@ -11,7 +16,13 @@ const BookDetails = () => {
     const { bookName, author, image, review, totalPages, rating, category, tags, publisher, yearOfPublishing } = singleBook;
 
     const handleMarkAsread = (id) => {
-        addToStoredDB(id)
+        // MySwal.fire({
+        //     title: "Good job!",
+        //     text: "You clicked the button!",
+        //     icon: "success"
+        // });
+
+        addToStoredDB(id);
     }
 
     return (
@@ -64,6 +75,8 @@ const BookDetails = () => {
                     </div>
                 </div>
             </div>
+
+            <ToastContainer />
         </div>
     );
 };
