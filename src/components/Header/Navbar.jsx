@@ -31,7 +31,7 @@ const Navbar = () => {
                                     {links}
                                 </ul>
                             </div>
-                            <a href='/' className='text-[28px] font-bold hover:opacity-65 duration-300' title='Book Vibe'>Book Vibe</a>
+                            <a href='/' className='text-xl md:text-[28px] font-bold hover:opacity-65 duration-300' title='Book Vibe'>Book Vibe</a>
                         </div>
                         <div className='navbar-center hidden lg:flex'>
                             <ul className='menu menu-horizontal px-1'>
