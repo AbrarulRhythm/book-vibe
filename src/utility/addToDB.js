@@ -17,6 +17,19 @@ const getStoredBook = () => {
     }
 }
 
+const getWishListBook = () => {
+
+    const wishListBook = localStorage.getItem('wishList');
+
+    if (wishListBook) {
+        const wishListBookSTR = JSON.parse(wishListBook);
+        return wishListBookSTR;
+    }
+    else {
+        return [];
+    }
+}
+
 const addToStoredDB = (id) => {
 
     const storedBookData = getStoredBook();
@@ -37,4 +50,24 @@ const addToStoredDB = (id) => {
     }
 }
 
-export { addToStoredDB, getStoredBook };
+const addToWishList = (id) => {
+
+    const storedWishListData = getWishListBook();
+
+    if (storedWishListData.includes(id)) {
+        // Error Message
+        MySwal.fire({
+            icon: "error",
+            title: "Oops...",
+            text: "This Book is already added",
+        });
+    }
+    else {
+        storedWishListData.push(id);
+        const data = JSON.stringify(storedWishListData)
+        localStorage.setItem('wishList', data);
+        toast('Added to Wish List.');
+    }
+}
+
+export { addToStoredDB, getStoredBook, addToWishList, getWishListBook };

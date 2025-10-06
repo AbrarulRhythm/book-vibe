@@ -1,6 +1,6 @@
 import React from 'react';
 import { useLoaderData, useParams } from 'react-router';
-import { addToStoredDB } from '../../utility/addToDB';
+import { addToStoredDB, addToWishList } from '../../utility/addToDB';
 // import Swal from 'sweetalert2';
 // import withReactContent from 'sweetalert2-react-content';
 
@@ -17,6 +17,10 @@ const BookDetails = () => {
 
     const handleMarkAsread = (id) => {
         addToStoredDB(id);
+    }
+
+    const handleWishList = (id) => {
+        addToWishList(id);
     }
 
     return (
@@ -64,7 +68,7 @@ const BookDetails = () => {
                         </div>
                         <div>
                             <button onClick={() => handleMarkAsread(bookId)} className='text-base font-medium py-4 px-8 border border-gray-300 rounded-lg cursor-pointer '>Mark As Read</button>
-                            <button className='text-base font-medium py-4 px-8 bg-sky-500 text-white rounded-lg cursor-pointer hover:bg-sky-600 duration-300 ml-4'>Add To Wishlist</button>
+                            <button onClick={() => handleWishList(bookId)} className='text-base font-medium py-4 px-8 bg-sky-500 text-white rounded-lg cursor-pointer hover:bg-sky-600 duration-300 ml-4'>Add To Wishlist</button>
                         </div>
                     </div>
                 </div>
