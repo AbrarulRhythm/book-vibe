@@ -1,4 +1,8 @@
 import { toast } from 'react-toastify';
+import Swal from 'sweetalert2';
+import withReactContent from 'sweetalert2-react-content';
+
+const MySwal = withReactContent(Swal);
 
 const getStoredBook = () => {
 
@@ -18,7 +22,12 @@ const addToStoredDB = (id) => {
     const storedBookData = getStoredBook();
 
     if (storedBookData.includes(id)) {
-        toast('This Book is already added');
+        // Error Message
+        MySwal.fire({
+            icon: "error",
+            title: "Oops...",
+            text: "This Book is already added",
+        });
     }
     else {
         storedBookData.push(id);

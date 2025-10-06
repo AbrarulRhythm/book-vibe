@@ -16,12 +16,6 @@ const BookDetails = () => {
     const { bookName, author, image, review, totalPages, rating, category, tags, publisher, yearOfPublishing } = singleBook;
 
     const handleMarkAsread = (id) => {
-        // MySwal.fire({
-        //     title: "Good job!",
-        //     text: "You clicked the button!",
-        //     icon: "success"
-        // });
-
         addToStoredDB(id);
     }
 
