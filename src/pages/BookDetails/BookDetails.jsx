@@ -25,6 +25,8 @@ const BookDetails = () => {
 
     return (
         <div className='book-details mb-20'>
+            <title>{bookName}</title>
+
             <div className='container'>
                 <div className='flex flex-wrap -mx-3 lg:-mx-6'>
                     <div className='w-full lg:w-6/12 px-3 lg:px-6 mb-6 lg:mb-0'>

@@ -5,7 +5,7 @@ import { Link } from 'react-router';
 const Book = ({ book }) => {
     return (
         <div className='w-full md:w-6/12 lg:w-4/12 px-3 mb-6 h-full'>
-            <Link to={`./bookDetails/${book.bookId}`}>
+            <Link to={`/bookDetails/${book.bookId}`}>
                 <div className='p-6 border border-gray-200 rounded-2xl'>
                     <div className='bg-[#F3F3F3] rounded-2xl mb-6 py-8'>
                         <img className='h-40 mx-auto' src={book.image} alt="Book Image" />

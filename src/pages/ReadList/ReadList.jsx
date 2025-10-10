@@ -51,6 +51,8 @@ const ReadList = () => {
 
     return (
         <section className='read-list'>
+            <title>Book Vibe - Read List</title>
+
             <div className='container'>
                 <div className='dropdown my-11'>
                     <div tabIndex={0} role='button' className='bg-[#23BE0A] text-white py-4 px-6 rounded-lg font-semibold flex items-center cursor-pointer hover:bg-[#16a800] duration-300'>Sort By : {sort ? sort : ''} <FaAngleDown className='ml-1 text-xl' /></div>

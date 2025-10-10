@@ -1,5 +1,5 @@
 import React from 'react';
-import { NavLink } from 'react-router';
+import { Link, NavLink } from 'react-router';
 
 const Navbar = () => {
 
@@ -31,7 +31,7 @@ const Navbar = () => {
                                     {links}
                                 </ul>
                             </div>
-                            <a href='/' className='text-xl md:text-[28px] font-bold hover:opacity-65 duration-300' title='Book Vibe'>Book Vibe</a>
+                            <Link to='/' className='text-xl md:text-[28px] font-bold hover:opacity-65 duration-300' title='Book Vibe'>Book Vibe</Link>
                         </div>
                         <div className='navbar-center hidden lg:flex'>
                             <ul className='menu menu-horizontal px-1'>

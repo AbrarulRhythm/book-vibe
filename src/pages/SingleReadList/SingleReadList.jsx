@@ -40,7 +40,7 @@ const SingleReadList = ({ book }) => {
                         <div className='flex items-start md:items-center flex-col md:flex-row'>
                             <span className='bg-[#E0EEFF] text-[#328EFF] py-2.5 px-5 rounded-4xl mr-4 mb-3 md:mb-0'>Category: {book.category}</span>
                             <span className='bg-[#FFF1DD] text-[#FFAC33] py-2.5 px-5 rounded-4xl mr-4 mb-5 md:mb-0'>Rating: {book.rating}</span>
-                            <Link>
+                            <Link to={`/bookDetails/${book.bookId}`}>
                                 <span className='bg-[#23BE0A] text-white py-2.5 px-5 rounded-4xl cursor-pointer hover:bg-[#16a800] duration-300'>View Details</span>
                             </Link>
                         </div>
